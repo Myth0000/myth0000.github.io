@@ -3,11 +3,75 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: "#0f0f0f";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.MainTileArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainTileArea p {
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0
+}
+
+.ProjectsPage {
+ margin: 30px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+#ProjectsText {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+.Project {
+  position: relative;
+  width: 337.5px;
+  height: 172.5px;
+
+  color: white;
+}
+
+.Project img {
+  width: 337.5px;
+  height: 172.5px;
+  opacity: 60%;
+  border-radius: 10px;
+}
+
+.Project p {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  font-weight: bold;
+  opacity: 80%;
+}
+
+.ProjectsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ProjectsContainer img:hover + p{
+  opacity: 1;
+}
+
+.ProjectsContainer img:hover {
+  opacity: 75%;
 }
