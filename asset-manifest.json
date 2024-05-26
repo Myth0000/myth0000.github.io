@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ca88efc7.css",
+    "main.js": "/static/js/main.4867f7be.js",
+    "static/media/The Forsaken Knight Thumbnail.png": "/static/media/The Forsaken Knight Thumbnail.40ce43fa7da65b363ec6.png",
+    "static/media/block sprint thumbnail.png": "/static/media/block sprint thumbnail.1b9964225db38114b72f.png",
+    "index.html": "/index.html",
+    "main.ca88efc7.css.map": "/static/css/main.ca88efc7.css.map",
+    "main.4867f7be.js.map": "/static/js/main.4867f7be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca88efc7.css",
+    "static/js/main.4867f7be.js"
+  ]
+}
