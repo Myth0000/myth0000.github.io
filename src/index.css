@@ -7,18 +7,18 @@ body {
   background-color: "#0f0f0f";
 }
 
-.MainTileArea {
+.MainTitleArea {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.MainTileArea p {
+.MainTitleArea p {
   font-size: 100px;
   font-weight: 400;
   text-align: center;
-  margin: 0
+  margin: 0;
 }
 
 .ProjectsPage {
@@ -35,6 +35,9 @@ body {
   margin: 0;
 }
 
+#TutorialProjectsText {
+  margin-top: 50px;
+}
 
 .Project {
   position: relative;

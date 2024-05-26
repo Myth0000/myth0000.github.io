@@ -6,15 +6,27 @@ import image2 from "../images/The Forsaken Knight Thumbnail.png"
 
 export default function ProjectsPage() {
     let projectsArray = [];
+    let tutorialProjectsArray = [];
 
     projectsJSON.forEach(data => {
-        projectsArray.push(<Project 
-            Name={data.Name} 
-            Image={data.Image} 
-            key={data.Name}
-            TutorialLink={data.TutorialLink ? data.TutorialLink : null}
-            Link={data.Link ? data.Link : null}/>)
+        if(data.Type == "Tutorial") {
+            tutorialProjectsArray.push(<Project 
+                Name={data.Name} 
+                Image={data.Image} 
+                key={data.Name}
+                Link={data.TutorialLink ? data.TutorialLink : null} />)
+        }
+        else {
+            projectsArray.push(<Project 
+                Name={data.Name} 
+                Image={data.Image} 
+                key={data.Name}
+                Link={data.Link ? data.Link : null}/>)
+        }
     })
+
+    if(projectsArray.length == 0) projectsArray.push(<Project key="NONE" />)
+    if(tutorialProjectsArray.length == 0) tutorialProjectsArray.push(<Project key="NONE" />)
 
     return (
         <div className="ProjectsPage">
@@ -24,6 +36,11 @@ export default function ProjectsPage() {
             <div className="ProjectsContainer">
                 {projectsArray}
             </div>
+
+            <p id="TutorialProjectsText">These are the projects I made using an online tutorial, mostly for learning purposes.</p>
+            <div className="ProjectsContainer">
+                {tutorialProjectsArray}
+            </div>
         </div>
     );
 }
@@ -31,7 +48,7 @@ export default function ProjectsPage() {
 
 function Project(props) {
     return (
-        <a className="Project" target={"_blank"} href={props.TutorialLink ? props.TutorialLink : null}>
+        <a className="Project" target={"_blank"} href={props.Link ? props.Link : null}>
             <img src={props.Image ? props.Image : blankImage} draggable={false} />
             <p>{props.Name ? props.Name : "Project Name"}</p>
         </a>
