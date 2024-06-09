@@ -4,7 +4,8 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   
-  background-color: "#0f0f0f";
+  background-color: #121212;
+  color: white
 }
 
 .MainTitleArea {
